@@ -53,7 +53,6 @@ const NavigationItem = ({
           </div>
         </div>
       </button>
-
     </ActionToolTip>
    );
 }

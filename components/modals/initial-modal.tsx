@@ -1,5 +1,8 @@
 'use client'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 
+import axios from "axios"
 import {
   Dialog,
   DialogContent,
@@ -24,7 +27,6 @@ import {
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { useEffect, useState } from 'react'
 import FieldUpload from '@/components/file-upload'
 
 const formSchema = z.object({
@@ -39,10 +41,11 @@ const formSchema = z.object({
 const InitialModal = () => {
 
   const [isMounted, setIsMounted] = useState(false);
+  const router = useRouter()
 
   useEffect(()=>{
     setIsMounted(true)
-  })
+  },[])
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -55,7 +58,14 @@ const InitialModal = () => {
   const isLoading = form.formState.isSubmitting;
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+    try {
+      await axios.post("/api/servers",values)
+      form.reset()
+      router.refresh()
+      window.location.reload()
+    } catch (error) {
+      
+    }
     
   }
 

@@ -1,6 +1,6 @@
 "use client"
 import { Plus } from "lucide-react";
-import { ActionToolTip } from "@/components/action-tooltip"
+import { ActionTooltip } from "@/components/action-tooltip"
 import { useModal } from "@/hooks/user-moda.store";
 
 const NavigationAction = () => {
@@ -9,7 +9,7 @@ const NavigationAction = () => {
 
   return ( 
     <div>
-      <ActionToolTip
+      <ActionTooltip
         side="right"
         align="center"
         label="Add a server"
@@ -22,7 +22,7 @@ const NavigationAction = () => {
             />
           </div>
         </button>
-      </ActionToolTip>
+      </ActionTooltip>
     </div>
    );
 }

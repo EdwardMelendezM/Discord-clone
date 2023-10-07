@@ -1,3 +1,4 @@
+"use client"
 import { ServerWithMembersWithProfile } from "@/types";
 import { MemberRole } from "@prisma/client";
 
@@ -16,6 +17,7 @@ import {
   User,
   UserPlus
 } from "lucide-react";
+import { useModal } from "@/hooks/user-moda.store";
 
 interface ServerHeaderProps{
   server: ServerWithMembersWithProfile
@@ -25,6 +27,7 @@ const ServerHeader = ({
   server,
   role
 }: ServerHeaderProps) => {
+  const { onOpen } = useModal()
 
   const isAdmin = role === MemberRole.ADMIN
   const isModerator = isAdmin || role === MemberRole.MODERATOR
@@ -49,7 +52,10 @@ const ServerHeader = ({
       >
         {
           isModerator && (
-            <DropdownMenuItem className="text-indigo-600 dark:text-indigo-400 px-3 py-2 text-sm cursor-pointer">
+            <DropdownMenuItem
+              className="text-indigo-600 dark:text-indigo-400 px-3 py-2 text-sm cursor-pointer"
+              onClick={()=>onOpen("invite", { server })}
+            >
               Invite peaple
               <UserPlus className="h-4 w-4 ml-auto" />
             </DropdownMenuItem>

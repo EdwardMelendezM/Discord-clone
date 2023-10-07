@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 import { currentProfile } from "@/lib/current-profile";
 
-import ServerHeader from "./server.header";
+import ServerHeader from "./server-header";
 
 interface ServerSidebarProps{
   serverId: string

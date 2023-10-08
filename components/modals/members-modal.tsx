@@ -11,7 +11,7 @@ import {
 
 } from '@/components/ui/dialog'
 
-import { useModal } from '@/hooks/user-moda.store'
+import { useModal } from '@/hooks/user-modal.store'
 import { ServerWithMembersWithProfile } from '@/types'
 import { ScrollArea } from '../ui/scroll-area'
 import UserAvatar from '../user-avatar'

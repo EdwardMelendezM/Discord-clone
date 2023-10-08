@@ -28,7 +28,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import FieldUpload from '@/components/file-upload'
-import { useModal } from '@/hooks/user-moda.store'
+import { useModal } from '@/hooks/user-modal.store'
 
 const formSchema = z.object({
   name: z.string().min(1, {

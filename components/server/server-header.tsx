@@ -17,7 +17,7 @@ import {
   User,
   UserPlus
 } from "lucide-react";
-import { useModal } from "@/hooks/user-moda.store";
+import { useModal } from "@/hooks/user-modal.store";
 
 interface ServerHeaderProps{
   server: ServerWithMembersWithProfile
@@ -84,7 +84,9 @@ const ServerHeader = ({
         }
         {
           isModerator && (
-            <DropdownMenuItem className="px-3 py-2 text-sm cursor-pointer">
+            <DropdownMenuItem className="px-3 py-2 text-sm cursor-pointer"
+              onClick={()=>onOpen("createChannel")}
+            >
               Create channel
               <Plus className="h-4 w-4 ml-auto" />
             </DropdownMenuItem>

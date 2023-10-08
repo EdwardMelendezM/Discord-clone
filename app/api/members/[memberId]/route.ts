@@ -11,7 +11,7 @@ export async function DELETE(
     const profile = await currentProfile()
     const { searchParams } = new URL(req.url)
 
-    const serverId = searchParams.get("serverID")
+    const serverId = searchParams.get("serverId")
 
     if(!profile){
       return new NextResponse("Unauthorized", { status: 401 })
@@ -57,7 +57,7 @@ export async function DELETE(
   }
 }
 
-export async function PATH(
+export async function PATCH(
   req: Request,
   { params }: { params: { memberId: string } }
 ){
@@ -67,7 +67,7 @@ export async function PATH(
     const { searchParams } = new URL(req.url)
     const { role } = await req.json()
 
-    const serverId = searchParams.get("severId")
+    const serverId = searchParams.get("serverId")
 
     if(!profile){
       return new NextResponse("Unauthorized", { status: 401 })

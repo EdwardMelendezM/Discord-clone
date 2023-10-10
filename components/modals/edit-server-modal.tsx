@@ -43,9 +43,9 @@ export const EditServerModal = () => {
 
   const { isOpen, onClose, type, data} = useModal()
   const router = useRouter()
-
-  const isModalOpen = isOpen && type === "editServer"
+  
   const { server } = data
+  const isModalOpen = isOpen && type === "editServer"
   
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -54,12 +54,12 @@ export const EditServerModal = () => {
       imageUrl:""
     }
   })
-
   useEffect(()=>{
     if(server){
       form.setValue("name", server.name)
       form.setValue("imageUrl", server.imageUrl)
     }
+    
   },[server, form])
 
   const isLoading = form.formState.isSubmitting;
@@ -71,12 +71,11 @@ export const EditServerModal = () => {
       router.refresh()
       onClose()
     } catch (error) {
-      
+      console.log(error);
     }
   }
 
   const handleClose = () =>{
-    form.reset()
     onClose()
   }
 

@@ -66,7 +66,7 @@ export const InviteModal = () => {
             <Input
               className='bg-zinc-300/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0'
               value={inviteUrl}
-              disabled={isLoading}
+              disabled={true}
             />
             <Button size="icon" disabled={isLoading}>
                 {

@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7123e04f-e0c3-431c-9a97-91aff54c7881" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/api/servers/[serverId]/leave/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/modals/leave-server-modal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/modals/delete-server-modal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/servers/[serverId]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/servers/[serverId]/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/providers/modal-provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/providers/modal-provider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/server/server-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/server/server-header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hooks/user-modal.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/user-modal.store.ts" afterDir="false" />
@@ -86,7 +86,7 @@
       <workItem from="1696912642985" duration="104000" />
       <workItem from="1696912757233" duration="1282000" />
       <workItem from="1696914068403" duration="320000" />
-      <workItem from="1696984707857" duration="3438000" />
+      <workItem from="1696984707857" duration="3958000" />
     </task>
     <servers />
   </component>

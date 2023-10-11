@@ -56,7 +56,7 @@ const ServerHeader = ({
               className="text-indigo-600 dark:text-indigo-400 px-3 py-2 text-sm cursor-pointer"
               onClick={()=>onOpen("invite", { server })}
             >
-              Invite peaple
+              Invite people
               <UserPlus className="h-4 w-4 ml-auto" />
             </DropdownMenuItem>
           )

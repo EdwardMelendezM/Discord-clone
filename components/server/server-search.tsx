@@ -20,7 +20,7 @@ interface ServerSearchProps{
         }[] | undefined
     }[]
 }
-export const ServerSearch = ({ data }:ServerSearchProps) =>{
+export const ServerSearch = ({ data }: ServerSearchProps) =>{
     const [open, setOpen] = useState(false)
     const router = useRouter()
     const params = useParams()
@@ -47,7 +47,6 @@ export const ServerSearch = ({ data }:ServerSearchProps) =>{
             document.removeEventListener("keydown", down);
         }
     }, []);
-
 
     return (
         <>

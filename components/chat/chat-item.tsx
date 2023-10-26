@@ -92,6 +92,8 @@ const ChatItem = ({
         url: `${socketUrl}/${id}`,
         query: socketQuery
       })
+      form.reset()
+      setIsEditing(false)
       await axios.patch(url, values)
     } catch (error) {
       console.log(error);

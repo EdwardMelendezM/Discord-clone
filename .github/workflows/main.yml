@@ -2,8 +2,9 @@ name: CI/CD for Discord Clone
 
 on:
   push:
-    branches:
-      - main
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
 
 jobs:
   build:
@@ -24,9 +25,9 @@ jobs:
       - name: Build the Next.js app
         run: npm run build
 
-      - name: Deploy to Vercel
+      - name: Deploy to Railway
         uses: amondnet/vercel-action@v20
         with:
-          vercel_token: ${{ secrets.VERCEL_TOKEN }}
-          vercel_project_id: your-vercel-project-id
-          vercel_scope: your-vercel-scope
+          vercel_token: ${{ secrets.SECRET_DEPLOY }}
+          vercel_project_id: ${{ secrets.ID_SECRET_CP }}
+          vercel_scope: judicious-spring

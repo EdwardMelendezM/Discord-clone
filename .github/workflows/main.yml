@@ -26,8 +26,8 @@ jobs:
         run: npm run build
 
       - name: Deploy to Railway
-        uses: amondnet/vercel-action@v20
+        uses: railwayapp/action@v0.3
         with:
-          vercel_token: ${{ secrets.SECRET_DEPLOY }}
-          vercel_project_id: ${{ secrets.ID_SECRET_CP }}
-          vercel_scope: judicious-spring
+          RAILWAY_API_KEY: ${{ secrets.RAILWAY_API_KEY }}
+          RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }}
+          RAILWAY_ENV_ID: production

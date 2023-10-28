@@ -25,4 +25,31 @@
 - Websocket fallback: Polling with alerts
 - ORM implementation using Prisma
 - MySQL database integration through Planetscale
+
 ## Install
+- Clone the repository
+```
+  git clone https://github.com/EdwardMelendezM/Discord-clone
+```
+
+- Install dependencies
+```
+  npm i
+```
+
+- Setup .env
+```
+  touch .env
+  cp .env.local .env
+```
+
+- Setup Prisma
+```
+  npx prisma generate
+  npx prisma db push
+```
+
+- Start the app
+```
+  npm run dev
+```
